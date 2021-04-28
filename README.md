@@ -40,4 +40,8 @@ Both models performed with a similar accuracy, the AutoML with 91,9% accuracy an
 ## Future work
 In the future would be interesting to explore new feature engineer techniques, specially creating new predictors. On the other hand, with AutoML would like to experiment with longer runs.
 
+## Proof of cluster deletion
+![image](https://user-images.githubusercontent.com/47700844/116472978-9a020c00-a844-11eb-9e4f-ba35e21fba6f.png)
+
+
 
