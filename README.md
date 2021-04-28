@@ -35,7 +35,7 @@ AutoML Pipeline follows similar steps than the Scikit-learn pipeline with the di
 AutoML selected the best model with an accuracy of   and selecting 
 
 ## Pipeline comparison
-Both models performed with a similar accuracy, the AutoML with and HyperDrive with . In case of AutoML model is an average of several individual classifiers
+Both models performed with a similar accuracy, the AutoML with 91,9% accuracy and HyperDrive with 91,4% accuracy . In case of AutoML model is an average of several individual classifiers
 
 ## Future work
 In the future would be interesting to explore new feature engineer techniques, specially creating new predictors. On the other hand, with AutoML would like to experiment with longer runs.
