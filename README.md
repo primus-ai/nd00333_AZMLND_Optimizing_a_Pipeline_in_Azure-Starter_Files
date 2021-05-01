@@ -23,10 +23,11 @@ Once the data is prepared, a train - test split of 30% is performed, providing e
 The Azure Hyperdrive was used for hyperparameter tuning and includes the following steps:
 
 ### Parameter Sampling
-I chose the Random Parameter Sampling, which doesn't require pre-specified values, this enables a broad search not limiting the space like in a grid search case.
+I chose the Random Parameter Sampling, which doesn't require pre-specified values, but chooses combinations from the parameter space defined in it. In this particular case i defined C parameter as a value from a uniform distribution between 0 and 10, and a max_iter parameter with four discrete values.
+RandomParameterSampling performs equal or better than Gridsearch sampling, but with the benefit that takes less time to complete the process
 
 ### Early Stopping Policy
-The BanditPolicy stopping policy retains models with better and/or similar performance, making it more flexible than a more rigid policy like truncation.
+The BanditPolicy stopping policy retains models with better and/or similar performance, making it more flexible than a more rigid policy like truncation. This early stopping policy stops the model to fit further if it doesn't improve anymore, this saves a lot of time.
 
 The best model had a 91,4% accuracy with the following parameters: C:0.408 and max iterations: 25.  
 
