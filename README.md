@@ -33,7 +33,17 @@ The best model had a 91,4% accuracy with the following parameters: C:0.408 and m
 
 ## AutoML
 AutoML Pipeline follows similar steps than the Scikit-learn pipeline with the difference that is not necessary to split the data into train and test sets, the predictors and target are merged before the AutoML process and this joined dataset is used as an input for the AutoML config.
-AutoML selected the best model with an accuracy of   and selecting 
+AutoML selected a Voting Ensemble as the best model with an accuracy of 91.6%, with the following parameters:
+- min_samples_leaf=0.01,
+- min_samples_split=0.01,
+- min_weight_fraction_leaf=0.0,
+- n_estimators=25,
+- n_jobs=1,
+- oob_score=True,
+- random_state=None,
+- verbose=0,
+- warm_start=False
+ The voting method was soft voting, where all models class probabilities are averaged and the prediction is made by the highest probability. 
 
 ## Pipeline comparison
 Both models performed with a similar accuracy, the AutoML with 91,9% accuracy and HyperDrive with 91,4% accuracy . In case of AutoML model is an average of several individual classifiers
@@ -42,6 +52,7 @@ Both models performed with a similar accuracy, the AutoML with 91,9% accuracy an
 In the future would be interesting to explore new feature engineer techniques, specially creating new predictors. On the other hand, with AutoML would like to experiment with longer runs.
 
 ## Proof of cluster deletion
+- Compute cluster was deleted manually.
 ![image](https://user-images.githubusercontent.com/47700844/116472978-9a020c00-a844-11eb-9e4f-ba35e21fba6f.png)
 
 
